@@ -49,6 +49,7 @@ public class NameExercise {
 		return isTwins;
 	}
 	
+	//returns initials from name input;
 	public String getInitials(String input) {
 		String[] inputs = input.split(" ");
 		StringBuilder sb = new StringBuilder();
@@ -61,7 +62,7 @@ public class NameExercise {
 	
 	public void nameTesting(String input, String input1) {
 		
-		
+
 		String[] inputArray = input.split("\"\"");
 		String[] input1Array = input1.split("\"\"");
 		String initials = getInitials(input);

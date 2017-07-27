@@ -2,8 +2,8 @@ package com.siriuscom.generics;
 
 public class Sailor {
 
-	boolean isPickingFruit;
-	int id;
+	private boolean isPickingFruit;
+	private int id;
 	
 	public Sailor(int id, boolean isPickingFruit) {
 		this.isPickingFruit = isPickingFruit;

@@ -6,11 +6,12 @@ import java.util.Map.Entry;
 
 public class AnagramExercise {
 
-	public void AnagramCheck(String input, String testStr) {
+	public boolean AnagramCheck(String input, String testStr) {
 		
-		String str = "[ \\!\\?\\.@]";
-		
+		String str = "[ !?@]";
+//		Character.isAlphabetic(codePoint);
 		input = input.replaceAll(str, "");
+		testStr = testStr.replaceAll(str, "");
 		System.out.println(input);
 		
 		Map<String, Integer> mapOfLetters = new HashMap<>();
@@ -43,8 +44,8 @@ public class AnagramExercise {
 			}
 		}
 		
-		System.out.println(isAnagram(mapOfLetters, mapOfLettersTestStr));
-		
+//		System.out.println(isAnagram(mapOfLetters, mapOfLettersTestStr));
+		return mapOfLetters.equals(mapOfLettersTestStr);
 	}
 	
 	public boolean isAnagram(Map<String, Integer> map, Map<String, Integer> compareMap) {

@@ -59,7 +59,7 @@ For every other date, N = (date+1)/2
 		String[] fruits = {"apples", "bananas", "oranges", "watermelons"};
 		int length = sailors.size();
 		for(int i = 0; i < length; i++) {
-			if(sailors.get(i).isPickingFruit) {
+			if(sailors.get(i).isPickingFruit()) {
 				int fruitCount = rand.nextInt(6)+1;
 				int randomFruit = rand.nextInt(fruits.length);
 				System.out.println("Sailor " + sailors.get(i).getId() + ") has gethered " + fruitCount + " " + fruits[randomFruit]);

@@ -6,11 +6,11 @@ import java.util.List;
 public class Driver {
 
 	public static <T> void main(String[] args) {
-		GenericArray ga = new GenericArray<>();
-		
-		
-		Integer[] nums = new Integer[] {5, 6, 2, 1, 7};
-		System.out.println(ga.compareObjects(nums, 3));
+//		GenericArray ga = new GenericArray<>();
+//		
+//		
+//		Integer[] nums = new Integer[] {5, 6, 2, 1, 7};
+//		System.out.println(ga.compareObjects(nums, 3));
 		
 		
 		List<String> temp = new ArrayList<>();
@@ -33,11 +33,26 @@ public class Driver {
 		
 //		RandomStream<T> rs = new RandomStream<>();
 //		rs.randomizer(temp.toArray());
-		List<String> list = new ArrayList<>();
 		
 		SailorExercise se = new SailorExercise();
 		List<Sailor> sailors = se.sailorSelection(se.sailorGeneration(), 15);
 		se.menuOutput(se.foodRetrieval(sailors));
+		
+		Cuboid<Integer> c = new Cuboid<>();
+		c.setBreadth(5);
+		c.setLength(30);
+		c.setWidth(9);
+		System.out.println(c.toString());
+		
+		Map map = new Map("year", "Car");
+		System.out.println(map.toString());
+		
+		map = new Map(1989, "GT-R");
+		System.out.println(map.toString());
+		
+		map = new Map(1969, "Capri");
+		System.out.println(map.toString());
+		
 	}
 	
 //	public <T extends Number> int count(Collection<T> items, int value) {
@@ -49,4 +64,8 @@ public class Driver {
 //		}
 //		return count;
 //	}
+	
+	
+	
+	
 }

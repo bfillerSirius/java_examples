@@ -23,8 +23,8 @@ WTI acquires season tickets for the local lacrosse team, to be shared by employe
 	public static void main(String[] args) {
 		TrainingExercises te = new TrainingExercises();
 		
-		int[][] temp = te.createArray(3);
-		int[][] transposed = te.transposeArray(temp);
+//		int[][] temp = te.createArray(3);
+//		int[][] transposed = te.transposeArray(temp);
 //		System.out.println(temp);
 //		System.out.println(temp.length);
 //		System.out.println(transposed);
@@ -40,8 +40,17 @@ WTI acquires season tickets for the local lacrosse team, to be shared by employe
 
 //		te.fibonacciLength(20);
 		//"parliament" is an anagram of "partial men,
-		AnagramExercise ae = new AnagramExercise();
+//		AnagramExercise ae = new AnagramExercise();
 //		ae.AnagramCheck("some one is ! skldj? sdklfd.", "");
-		ae.AnagramCheck("parliament", "partial men");
+//		boolean tmp = ae.AnagramCheck("parliament", "partial men");
+//		System.out.println(tmp);
+		FunctionRootFinder frf = new FunctionRootFinder();
+		frf.positiveAndNegativeQuadratic(1, 3, -4);
+		PatternPrinter pattPrint = new PatternPrinter();
+		pattPrint.square();
+		pattPrint.backwardsZ();
+		pattPrint.printZ();
+		pattPrint.printX();
+		pattPrint.printXBoxed();
 	}
 }
