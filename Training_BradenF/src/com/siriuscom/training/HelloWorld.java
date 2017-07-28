@@ -17,15 +17,7 @@ public class HelloWorld {
 
 		System.out.println(numOfMsg++);
 		
-		System.out.println( 10<9 ?  "true":"false");
+//		System.out.println( 10<9 ?  "true":"false");
 		
-//		switch (key) {
-//		case value:
-//			
-//			break;
-//
-//		default:
-//			break;
-//		}
 	}
 }

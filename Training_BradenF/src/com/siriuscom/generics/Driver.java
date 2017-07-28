@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Driver {
 
+	@SuppressWarnings("unchecked")
 	public static <T> void main(String[] args) {
 //		GenericArray ga = new GenericArray<>();
 //		
@@ -20,38 +21,32 @@ public class Driver {
 		temp.add("Chris");
 		temp.add("Scout");
 		temp.add("Jen");
-//
-//		NameExercise ne = new NameExercise();
-//
-//
-//		System.out.println(3/2);
-//		System.out.println(5/2);
-//
-//		ne.nameTesting("Peter Parker", "Pete Parkley");
-//		ne.nameTesting("Tim Drake", "Pete Parkley");
-
 		
 		RandomStream<T> rs = new RandomStream<>();
 		rs.printOutUsingFor((T[]) temp.toArray());
+
+		NameExercise ne = new NameExercise();
+
+		ne.nameTesting("Peter Parker", "Pete Parkley");
+		ne.nameTesting("Tim Drake", "Pete Parkley");
+
 		
-//		for(int i = 0; i < array.size(); i++) {
-//			System.out.println(array.get(i));
-//		}
-//		SailorExercise se = new SailorExercise();
-//		List<Sailor> sailors = se.sailorSelection(se.sailorGeneration(), 15);
-//		se.menuOutput(se.foodRetrieval(sailors));
+
 		
+
+		SailorExercise se = new SailorExercise();
+		se.CaptainSelection();
 //		Cuboid<Integer> c = new Cuboid<>();
 //		c.setBreadth(5);
 //		c.setLength(30);
 //		c.setWidth(9);
 //		System.out.println(c.toString());
-//		
-		Map map = new Map();
-		map.put("Year", "Car");
-		map.put(1989, "GT-R");
-		map.put(1969, "Capri");
-		System.out.println(map.toString());
+
+//		Map map = new Map();
+//		map.put("Year", "Car");
+//		map.put(1989, "GT-R");
+//		map.put(1969, "Capri");
+//		System.out.println(map.toString());
 		
 		
 	}

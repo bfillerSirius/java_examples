@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ExceptionLogic {
 
 	public void methodThrowingException() {
+		//it needs try catch or throws
 		try {
 			throw new IOException();
 		} catch (IOException e) {
@@ -20,6 +21,7 @@ public class ExceptionLogic {
 	public void giveMeEnumerator() {
 		
 		boolean tryAgain = true;
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		
 		while(tryAgain) {
@@ -55,8 +57,8 @@ public class ExceptionLogic {
 	
 	public void numFormatExceptionMethod() {
 		
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
-		boolean tryAgain = true;
 		System.out.println("Type in 10 students marks.");
 		int[] nums = new int[10];
 		int counter = 0;

@@ -32,6 +32,7 @@ public class GenericArray<T extends Comparable<T>> {
 		return object;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public int CountOfCollectionPatternMatch(Collection<T> collection, T pattern) {
 		T[] arrayOfColl = (T[]) collection.toArray();
 		int counter = 0;

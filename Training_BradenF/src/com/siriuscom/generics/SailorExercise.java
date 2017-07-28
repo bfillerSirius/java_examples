@@ -26,7 +26,7 @@ For every other date, N = (date+1)/2
 	Date date = new Date();
 	Calendar cal = Calendar.getInstance();
 	
-	public List<Sailor> sailorGeneration(){
+	private List<Sailor> sailorGeneration(){
 		List<Sailor> sailors = new ArrayList<>();
 		
 		for(int i = 0; i < 35; i++) {
@@ -36,8 +36,9 @@ For every other date, N = (date+1)/2
 		return sailors;
 	}
 	
-	public List<Sailor> sailorSelection(List<Sailor> sailors, int n) {
+	private List<Sailor> sailorSelection(List<Sailor> sailors) {
 //		List<Sailor> taskedSailors = new ArrayList<>();
+		int n = sailorSelectionCount(date);
 		int quota = 0;
 		Random rand = new Random();
 		int length = sailors.size();
@@ -53,7 +54,7 @@ For every other date, N = (date+1)/2
 		
 	}
 	
-	public Map<String, Integer> foodRetrieval(List<Sailor> sailors) {
+	private Map<String, Integer> foodRetrieval(List<Sailor> sailors) {
 		Map<String, Integer> totalCountOfFood = new HashMap<>();
 		Random rand = new Random();
 		String[] fruits = {"apples", "bananas", "oranges", "watermelons"};
@@ -86,14 +87,14 @@ For every other date, N = (date+1)/2
 		return totalCountOfFood;
 	}
 	
-	public void menuOutput(Map<String, Integer> countOfFood) {
+	private void menuOutput(Map<String, Integer> countOfFood) {
 		System.out.println("The menu is: ");
 		for(Entry<String, Integer> kvp : countOfFood.entrySet()) {
 			System.out.println(kvp.getValue() + " " + kvp.getKey());
 		}
 	}
 	
-	public int sailorSelectionCount(Date date) {
+	private int sailorSelectionCount(Date date) {
 		int temp = cal.get(Calendar.DAY_OF_MONTH);
 		int n = 0;
 		if(isPrime(temp)) {
@@ -126,5 +127,10 @@ For every other date, N = (date+1)/2
 		}
 	}
 	
+	
+	public void CaptainSelection() {
+		List<Sailor> sailors = sailorSelection(sailorGeneration());
+		menuOutput(foodRetrieval(sailors));
+	}
 	
 }
