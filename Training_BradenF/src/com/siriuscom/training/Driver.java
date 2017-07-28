@@ -57,12 +57,12 @@ WTI acquires season tickets for the local lacrosse team, to be shared by employe
 //		System.out.println(tmp);
 //		FunctionRootFinder frf = new FunctionRootFinder();
 //		frf.positiveAndNegativeQuadratic(1, 3, -4);
-//		PatternPrinter pattPrint = new PatternPrinter();
-//		pattPrint.square();
-//		pattPrint.backwardsZ();
-//		pattPrint.printZ();
-//		pattPrint.printX();
-//		pattPrint.printXBoxed();
+		PatternPrinter pattPrint = new PatternPrinter();
+		pattPrint.square();
+		pattPrint.backwardsZ();
+		pattPrint.printZ();
+		pattPrint.printX();
+		pattPrint.printXBoxed();
 //		ByteAsIntValue baiv = new ByteAsIntValue();
 //		baiv.getBytes(20);
 //		System.out.println(baiv.getBytes(20));

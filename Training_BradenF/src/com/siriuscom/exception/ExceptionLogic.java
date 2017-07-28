@@ -7,6 +7,7 @@ public class ExceptionLogic {
 
 	public void methodThrowingException() {
 		//it needs try catch or throws
+//		throw new IOException();
 		try {
 			throw new IOException();
 		} catch (IOException e) {
@@ -18,7 +19,7 @@ public class ExceptionLogic {
 		
 	}
 	
-	public void giveMeEnumerator() {
+	public void giveMeNumerator() {
 		
 		boolean tryAgain = true;
 		@SuppressWarnings("resource")
@@ -30,11 +31,17 @@ public class ExceptionLogic {
 				String input = scan.nextLine();
 				if(!input.startsWith("Q") && !input.startsWith("q")) {
 					int numerator = Integer.parseInt(input);
+					System.out.println(numerator);
 					System.out.println("Give me a denominator");
 					int divisor = Integer.parseInt(scan.nextLine());
+					System.out.println(divisor);
 					System.out.println(numerator/divisor);
+					System.out.println(numerator + " / " + divisor);
 				}
 				tryAgain = false;
+			}
+			catch(NumberFormatException e) {
+				System.out.println("Not a number");
 			}
 			catch(Exception e) {
 				System.out.println("There was a problem with your input try again.");
@@ -81,13 +88,11 @@ public class ExceptionLogic {
 			catch(NumberFormatException e) {
 				System.out.println("Bad stuff");
 			} catch (NegativeException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (OutOfGradeRangeException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch(Exception e) {
-				System.out.println("Bad stuff");
+				System.out.println("Something bad happened.");
 			}
 		}
 		int length = nums.length;
