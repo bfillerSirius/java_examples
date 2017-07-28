@@ -5,6 +5,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class AnagramExercise {
+	
+	public AnagramExercise() {
+		
+	}
 
 	public boolean AnagramCheck(String input, String testStr) {
 		

@@ -1,0 +1,15 @@
+Set, List, Queue, Map
+
+Whimsical Toys Inc (WTI) needs to record the names of all its employees. Every month, an employee will be chosen at random from 
+these records to receive a free toy.
+answer: List, a list can have everyones name, and one can simply randomize the number of the index you want and pick that index.
+
+WTI has decided that each new product will be named after an employee but only first names will be used, and each name will be 
+used only once. Prepare a list of unique first names.
+answer: Set is used to get a collection of unique names because you can't have duplicate names.
+
+WTI decides that it only wants to use the most popular names for its toys. Count up the number of employees who have each first name.
+answer: Map, use name as key and number of names as count, if it contains the value, increment, else then add it to the map
+
+WTI acquires season tickets for the local lacrosse team, to be shared by employees. Create a waiting list for this popular sport.
+answer: Queue is a stack that allows first in line, first out behavior

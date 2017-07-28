@@ -4,6 +4,7 @@ public class KeyValuePair<T> {
 
 	private T key;
 	private T value;
+	
 	public KeyValuePair(T key, T value) {
 		this.key = key;
 		this.value = value;

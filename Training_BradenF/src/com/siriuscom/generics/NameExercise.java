@@ -1,6 +1,10 @@
 package com.siriuscom.generics;
 
 public class NameExercise {
+	
+	public NameExercise() {
+		
+	}
 
 	private boolean monotonous(String name) {
 		String[] arrayOfNames = name.toLowerCase().split(" ");

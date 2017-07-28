@@ -7,6 +7,10 @@ public class CustomHashTable<T>{
 
 	List<KeyValuePair<T>> list = new ArrayList<>();
 	
+	public CustomHashTable(){
+		
+	}
+	
 	public String get(T key) {
 		for(int i = 0; i < list.size(); i++) {
 			if(list.get(i).getKey().equals(key)) {

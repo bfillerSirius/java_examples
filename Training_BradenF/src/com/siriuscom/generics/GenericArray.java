@@ -5,6 +5,9 @@ import java.util.Collection;
 public class GenericArray<T extends Comparable<T>> {
 //counts the number of elems in an array that are greater than a certain array
 	
+	public GenericArray(){
+		
+	}
 
 	
 	public int compareObjects(T[] array, T object) {

@@ -9,6 +9,9 @@ public class ByteAsIntValue {
 //		15323000 Byte are 15.323 MByte
 //		1532300001 Byte are 1.532300001 GByte
 
+	public ByteAsIntValue() {
+		
+	}
 	
 	public String getBytes(int i) {
 		//int num of bytes

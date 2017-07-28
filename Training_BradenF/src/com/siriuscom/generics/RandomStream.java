@@ -9,6 +9,10 @@ public class RandomStream<T> {
 	ObjectOutputStream oos;
 	
 	
+	public RandomStream() {
+		
+	}
+	
 	public void printOutUsingFor(T[] array) {
 		StringBuilder sb = new StringBuilder();
 //		StringBuffer strbuf = new StringBuffer();

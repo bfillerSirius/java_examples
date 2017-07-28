@@ -2,7 +2,6 @@ package com.siriuscom.generics;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +22,11 @@ For every other date, N = (date+1)/2
 	 * 
 	 * */
 	//get N
-	Date date = new Date();
+	
+	public SailorExercise() {
+		
+	}
+	
 	Calendar cal = Calendar.getInstance();
 	
 	private List<Sailor> sailorGeneration(){
@@ -38,7 +41,7 @@ For every other date, N = (date+1)/2
 	
 	private List<Sailor> sailorSelection(List<Sailor> sailors) {
 //		List<Sailor> taskedSailors = new ArrayList<>();
-		int n = sailorSelectionCount(date);
+		int n = sailorSelectionCount(cal);
 		int quota = 0;
 		Random rand = new Random();
 		int length = sailors.size();
@@ -94,7 +97,7 @@ For every other date, N = (date+1)/2
 		}
 	}
 	
-	private int sailorSelectionCount(Date date) {
+	private int sailorSelectionCount(Calendar cal) {
 		int temp = cal.get(Calendar.DAY_OF_MONTH);
 		int n = 0;
 		if(isPrime(temp)) {
