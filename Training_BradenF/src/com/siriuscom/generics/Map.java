@@ -1,5 +1,8 @@
 package com.siriuscom.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Map<T> {
 
 	
@@ -10,16 +13,23 @@ public class Map<T> {
 //			You woll end up with three instances of Map storing the following data:
 	
 	
-	private T key;
-	private T value;
+	private List<KeyValuePair<T>> backingList = new ArrayList<>();
 	
-	public Map(T key, T value) {
-		this.key = key;
-		this.value = value;
+	public Map() {
+		
+	}
+	
+	public String put(T key, T value) {
+		backingList.add(new KeyValuePair<T>(key, value));
+		return key + "";
 	}
 	
 	@Override
 	public String toString() {
-		return "|| " + key + " || " + value + " ||";
+		String output = "";
+		for(KeyValuePair<T> kvp : backingList) {
+			output += "|| " + kvp.getKey() + " || " + kvp.getValue() + " || \n";
+		}
+		return output;
 	}
 }

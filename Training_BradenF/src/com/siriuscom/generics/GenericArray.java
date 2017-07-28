@@ -1,5 +1,7 @@
 package com.siriuscom.generics;
 
+import java.util.Collection;
+
 public class GenericArray<T extends Comparable<T>> {
 //counts the number of elems in an array that are greater than a certain array
 	
@@ -29,5 +31,20 @@ public class GenericArray<T extends Comparable<T>> {
 		}
 		return object;
 	}
+	
+	public int CountOfCollectionPatternMatch(Collection<T> collection, T pattern) {
+		T[] arrayOfColl = (T[]) collection.toArray();
+		int counter = 0;
+		int length = collection.size();
+		for(int i = 0; i < length; i++) {
+			if(arrayOfColl[i] == pattern) {
+				counter++;
+			}
+		}
+		
+		return counter;
+	}
+	
+	
 	
 }

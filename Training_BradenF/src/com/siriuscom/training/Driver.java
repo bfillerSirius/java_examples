@@ -30,7 +30,18 @@ WTI acquires season tickets for the local lacrosse team, to be shared by employe
 //		System.out.println(transposed);
 		
 //		te.examPoints();
-//		te.dayOfWeek(1, 3, 2006);
+//		te.dayOfWeek(17, 2, 2010);
+		
+		//wednesdays
+		te.dayOfWeek(21, 2, 2007);
+		te.dayOfWeek(17, 2, 2010);
+		te.dayOfWeek(1, 3, 2006);
+		
+		//sundays
+		te.dayOfWeek(4, 4, 2010);
+		te.dayOfWeek(23, 3, 1916);
+		te.dayOfWeek(8, 4, 2007);
+		
 //		printedMultiplicationTable(10, 10);
 //		smallestDistanceArray(new int[]{4, 8, 6, 1, 2, 9, 4});
 //		System.out.println(te.calcSumOfCharchar(new char[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}));
@@ -44,13 +55,21 @@ WTI acquires season tickets for the local lacrosse team, to be shared by employe
 //		ae.AnagramCheck("some one is ! skldj? sdklfd.", "");
 //		boolean tmp = ae.AnagramCheck("parliament", "partial men");
 //		System.out.println(tmp);
-		FunctionRootFinder frf = new FunctionRootFinder();
-		frf.positiveAndNegativeQuadratic(1, 3, -4);
-		PatternPrinter pattPrint = new PatternPrinter();
-		pattPrint.square();
-		pattPrint.backwardsZ();
-		pattPrint.printZ();
-		pattPrint.printX();
-		pattPrint.printXBoxed();
+//		FunctionRootFinder frf = new FunctionRootFinder();
+//		frf.positiveAndNegativeQuadratic(1, 3, -4);
+//		PatternPrinter pattPrint = new PatternPrinter();
+//		pattPrint.square();
+//		pattPrint.backwardsZ();
+//		pattPrint.printZ();
+//		pattPrint.printX();
+//		pattPrint.printXBoxed();
+//		ByteAsIntValue baiv = new ByteAsIntValue();
+//		baiv.getBytes(20);
+//		System.out.println(baiv.getBytes(20));
+//		System.out.println(baiv.getBytes(223432430));
+//		System.out.println(baiv.getBytes(232230));
+//		System.out.println(baiv.getBytes(2320));
+//		System.out.println(baiv.getBytes(2147483000));
+
 	}
 }

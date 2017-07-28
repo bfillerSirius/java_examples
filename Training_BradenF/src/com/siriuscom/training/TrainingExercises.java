@@ -25,11 +25,6 @@ public class TrainingExercises {
 		}
 		return tempArray;
 	}
-	
-	public void printArray(int[][] inputArray) {
-		
-	}
-	
 
 	
 	public double examPointsConditions(double i){
@@ -95,6 +90,8 @@ public class TrainingExercises {
 	}
 
 	public void dayOfWeek(int day, int month, int year) {
+		//31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+		int[] months = new int[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		int days = (year - 1900) * 365;
 		int leapYears = (year - 1900)/4;
 		
@@ -102,6 +99,11 @@ public class TrainingExercises {
 			leapYears -= 1;
 		}
 		days += leapYears;
+		
+		for(int i = 0; i < (month-1); i++) {
+			days+=months[i];
+		}
+		days+=day;
 		int division = days % 7;
 		System.out.println(division);
 	}
@@ -144,30 +146,24 @@ public class TrainingExercises {
 		return result;
 	}
 	
-	public void anagramChecker(String input, String input1) {
-		String reducedInput = input.toLowerCase().replace(" ", "");
-		String reducedInput1 = input.toLowerCase().replace(" ", "");
-
-		//create an array of counters for each letter then
-	}
-	
 	public void clw() {
+		String replacement = "";
+
 		for(int i = 1; i <= 110; i++) {
-			if(i == 35) {
-				System.out.println();
-			}
-			String replacement = "";
+			boolean changed = false;
 			if(i % 3 == 0) {
 				replacement += "Coza";
+				changed = true;
 			}
-			else if(i % 5 == 0) {
+			if(i % 5 == 0) {
 				replacement += "Loza";
-
+				changed = true;
 			}
-			else if( i % 7 == 0) {
+			if( i % 7 == 0) {
 				replacement += "Moza";
+				changed = true;
 			}
-			else {
+			if(!changed) {
 				replacement += i + " ";
 			}
 			System.out.println(replacement);

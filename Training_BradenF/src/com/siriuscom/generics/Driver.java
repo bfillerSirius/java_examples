@@ -20,38 +20,39 @@ public class Driver {
 		temp.add("Chris");
 		temp.add("Scout");
 		temp.add("Jen");
-
-		NameExercise ne = new NameExercise();
-
-
-		System.out.println(3/2);
-		System.out.println(5/2);
-
-		ne.nameTesting("Peter Parker", "Pete Parkley");
-		ne.nameTesting("Tim Drake", "Pete Parkley");
+//
+//		NameExercise ne = new NameExercise();
+//
+//
+//		System.out.println(3/2);
+//		System.out.println(5/2);
+//
+//		ne.nameTesting("Peter Parker", "Pete Parkley");
+//		ne.nameTesting("Tim Drake", "Pete Parkley");
 
 		
-//		RandomStream<T> rs = new RandomStream<>();
-//		rs.randomizer(temp.toArray());
+		RandomStream<T> rs = new RandomStream<>();
+		rs.printOutUsingFor((T[]) temp.toArray());
 		
-		SailorExercise se = new SailorExercise();
-		List<Sailor> sailors = se.sailorSelection(se.sailorGeneration(), 15);
-		se.menuOutput(se.foodRetrieval(sailors));
+//		for(int i = 0; i < array.size(); i++) {
+//			System.out.println(array.get(i));
+//		}
+//		SailorExercise se = new SailorExercise();
+//		List<Sailor> sailors = se.sailorSelection(se.sailorGeneration(), 15);
+//		se.menuOutput(se.foodRetrieval(sailors));
 		
-		Cuboid<Integer> c = new Cuboid<>();
-		c.setBreadth(5);
-		c.setLength(30);
-		c.setWidth(9);
-		System.out.println(c.toString());
-		
-		Map map = new Map("year", "Car");
+//		Cuboid<Integer> c = new Cuboid<>();
+//		c.setBreadth(5);
+//		c.setLength(30);
+//		c.setWidth(9);
+//		System.out.println(c.toString());
+//		
+		Map map = new Map();
+		map.put("Year", "Car");
+		map.put(1989, "GT-R");
+		map.put(1969, "Capri");
 		System.out.println(map.toString());
 		
-		map = new Map(1989, "GT-R");
-		System.out.println(map.toString());
-		
-		map = new Map(1969, "Capri");
-		System.out.println(map.toString());
 		
 	}
 	
@@ -64,6 +65,15 @@ public class Driver {
 //		}
 //		return count;
 //	}
+	
+	/*
+2. Write a generic method to count the number of elements in a collection that have a specific property
+ (for example, odd integers, prime numbers, palindromes).
+
+
+3. Write a program that prints its arguments in random order. Do not make a copy of the argument array. 
+	Demonstrate how to print out the elements using both streams and the traditional enhanced for statement.
+	 * */
 	
 	
 	
