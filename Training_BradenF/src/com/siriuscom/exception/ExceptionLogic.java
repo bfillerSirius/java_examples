@@ -5,21 +5,17 @@ import java.util.Scanner;
 
 public class ExceptionLogic {
 
-	public void methodThrowingException() {
+	public void methodThrowingException() throws IOException {
 		//it needs try catch or throws
-//		throw new IOException();
-		try {
-			throw new IOException();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		throw new IOException();
+
 	}
 	
 	public ExceptionLogic(){
 		
 	}
 	
-	public void giveMeNumerator() {
+	public void giveMeNumerator() throws Exception {
 		
 		boolean tryAgain = true;
 		@SuppressWarnings("resource")
@@ -40,12 +36,7 @@ public class ExceptionLogic {
 				}
 				tryAgain = false;
 			}
-			catch(NumberFormatException e) {
-				System.out.println("Not a number");
-			}
-			catch(Exception e) {
-				System.out.println("There was a problem with your input try again.");
-			}
+
 			finally {
 				if(!tryAgain) {
 					System.out.println("Thank you for using the application!");

@@ -10,7 +10,7 @@ public class DateProjects {
 	
 	//returns time in New York from Austin time
 	public void getNewYorkTime() {
-		Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("America/New York"));
+		Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
 		cal.add(Calendar.HOUR, 1);
 		Date date = cal.getTime();
 		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");

@@ -6,13 +6,13 @@ import java.util.List;
 public class NonGenericMediaLibrary {
 
 	
-	List<Object> mediaFiles = new ArrayList<>();
+	List<Media> mediaFiles = new ArrayList<>();
 	
-	public void add(Object file) {
+	public void add(Media file) {
 		mediaFiles.add(file);
 	}
 	
-	public Object remove(Object file) {
+	public Media remove(Media file) {
 		return file;
 	}
 	
@@ -23,7 +23,7 @@ public class NonGenericMediaLibrary {
 		}
 	}
 	
-	public List<Object> getMediaFiles() {
+	public List<Media> getMediaFiles() {
 		return mediaFiles;
 	}
 }

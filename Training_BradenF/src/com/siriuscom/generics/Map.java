@@ -21,7 +21,17 @@ public class Map<T> {
 	
 	public String put(T key, T value) {
 		backingList.add(new KeyValuePair<T>(key, value));
-		return key + "";
+		return key + " " + value;
+	}
+	
+	public void remove(T key) {
+		int length = backingList.size();
+		for(int i = 0; i < length; i++) {
+			if(backingList.get(i).equals(key)) {
+				backingList.remove(i);
+				break;
+			}
+		}
 	}
 	
 	@Override
